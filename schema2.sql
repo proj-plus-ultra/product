@@ -1,0 +1,50 @@
+DROP DATABASE IF EXISTS fenty;
+
+CREATE DATABASE fenty;
+
+USE fenty;
+
+
+CREATE TABLE photos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  background VARCHAR(1000) NOT NULL,
+  img1 VARCHAR(1000),
+  img2 VARCHAR(1000),
+  img3 VARCHAR(1000)
+);
+
+CREATE TABLE products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  price INT NOT NULL,
+  category VARCHAR(50) NOT NULL,
+  description VARCHAR(1000) NOT NULL,
+  rating INT NOT NULL,
+  reviews INT NOT NULL,
+  marketing VARCHAR (255)
+);
+
+
+CREATE TABLE colors (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name1 VARCHAR(255) NOT NULL,
+  name2 VARCHAR(255) NOT NULL,
+  name3 VARCHAR(255) NOT NULL,
+  color1 VARCHAR(255) NOT NULL,
+  color2 VARCHAR(255) NOT NULL,
+  color3 VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE colorJunc (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  colorID INT REFERENCES colors(id),
+  productID INT REFERENCES products(id)
+);
+
+
+
+
+-- CREATE TABLE table1 (fk_field1 type1, field2 type2, ...,
+--   FOREIGN KEY (fk_field1) REFERENCES table2 (t2_fieldA))
+--     [ON UPDATE|ON DELETE] [CASCADE|SET NULL]
