@@ -1,19 +1,18 @@
 import React from 'react';
-import styled from 'styled-components'
-
 
 function AddToBag() {
-
   let newStyles = {
     backgroundColor: 'black',
-    color: "white",
+    fontFamily: 'Questrial',
+    fontSize: '.9167rem',
+    letterSpacing: '3px',
+    color: 'white',
     width: 284,
-    height: 38
-  }
+    height: 38,
+  };
   return (
-    <button style = {newStyles} className = "addToBag">Add To Cart</button>
-  )
+    <button type="submit" style={newStyles}>Add To Cart </button>
+  );
 }
 
 export default AddToBag;
-

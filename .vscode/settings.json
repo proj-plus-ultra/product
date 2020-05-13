@@ -10,5 +10,17 @@
   "javascript.suggest.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
-  "eslint.enable": false
+  "eslint.enable": true,
+  "cSpell.ignoreWords": [
+    "beauty",
+    "fenty"
+  ],
+  "cSpell.words": [
+    "beauty",
+    "config",
+    "eslint",
+    "fenty",
+    "hackreactor",
+    "inspo"
+  ]
 }

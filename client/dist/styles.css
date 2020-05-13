@@ -1,91 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 
-
 body {
   font-family: brown-light,Questrial,Times,Arial,sans-serif;
-  /* background-image: url('./images/background.png') */
   background-image: url('./images/background.png');
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 
-.Product {
-  font-family: 'brown-regular','Questrial',Times,Arial,sans-serif;
-  font-size: 30px;
-  letter-spacing: 3px;
-}
-
-.addToCart {
-  display: flex;
-  flex-direction: row;
-  margin-right: 0;
-  width: 113;
-  height: 46;
-  /* border: solid;
-  border-color: black;
-  border-right: 1px;
-  border-width: 1px; */
-}
-
-.addToBag {
-  height: 46px;
-  font-family: brown-light,Questrial,Times,Arial,sans-serif;
-  font-size: .9167rem;
-  letter-spacing: 3px;
-}
-
-
-
+/*
 .container {
   padding: 20px 40px 40px;
-  max-width: 640px;
   display: flex;
   justify-content: flex-start
   &__image {
       margin: 20px 30px 0 0;
       width: 200px;
-      object-fit: contain;
       align-self: flex-start;
   }
   &__text {
       flex: 1 1 auto;
   }
-}
+} */
 
-.sideContainer {
+/* .sideContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: column; */
+  /* position: absolute; */
+  /* left: 1600px;
+  width: 2000; */
+/* } */
+
+/* .foreground {
   position: absolute;
-  /* right: 1000px; */
-  left: 1600px;
-  width: 2000;
-}
+  width: 24;
+  height: 24;
+  viewBox: "0 0 24 24";
+} */
 
 
-.photoContainer {
-  margin: 10px;
-  padding: 10px;
-  width: 900
-}
-
-.foreground {
+/* .foreground {
   position: absolute;
   left: 1000px;
   top: 200px;
   height: 543px;
   width: 434px;
   color: #000;
-}
+} */
 
-.foreground:hover  {
-  cursor: crosshair
-}
-
-
+/*
 .detail {
   font-family: brown-light,Questrial,Times,Arial,sans-serif;
   display: flex;
@@ -95,9 +61,9 @@ body {
   letter-spacing: 3px;
   color: black;
   margin-left: 4px;
-}
+} */
 
-
+/*
 .info {
   display: flex;
   flex-direction: column;
@@ -112,49 +78,14 @@ body {
   line-height: 18px;
   color: #1e1e1e;
   font-weight: 700
-}
-
-
-/* ul {
-  padding: 0;
-  margin: 0;
-  /* background: #fff; */
 } */
 
-/* li {
-  /* display: column; */
-  /* position: relative; */
-  /* list-style-type: circle;
-  color: white;
-  background-color: white; */
-} */
-
-/* ul ul {
-  position: absolute;
-  display: none;
-  left: 0;
-  top: 100%;
-  list-style-type: none;
-} */
-
-/* li:hover ul {
-  display: inline;
-} */
-
-
-
-.palette {
+/* .palette {
   display: flex;
   align-items: center;
   width: 1000px;
   border: black 2px;
-}
-
-.Colors {
-  padding: 50px;
-}
-
-
+} */
 
 
 .navlink-home:hover  {
@@ -202,45 +133,6 @@ body {
 
 
 
-
-
-
-
-
-
-.addToWishList {
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-
-
-
-
-
-.modal {
-  display: none;
-  position: fixed;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.modal-content {
-  position: relative;
-  background-color: white;
-  padding: 20px;
-  margin: auto;
-  width: 75%;
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-
  .dropdown {
   position: relative;
   display: inline-block;
@@ -256,12 +148,11 @@ body {
   background-color: white;
   font-weight:bold;
   position: absolute;
-
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-li a {
+/* li a {
   color: #000;
   text-decoration: none;
 
@@ -276,7 +167,8 @@ li:last-child {
 li:hover {
   background-color: #e5e5e5;
   color: white;
-}
+} */
+
 .button{
   width:178px;
   height:30px;

@@ -1,24 +1,25 @@
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
 
-
 class Reviews extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       ratings: ''
-    }
+    };
   }
 
   onStarClick(nextValue, prevValue, name) {
-    this.setState({rating: nextValue});
+    this.setState({ rating: nextValue });
   }
 
   render() {
-    const { rating } = this.state;
-    // console.log(this.props)
+    let reviewStyles = {
+      display: 'inline-flex',
+      alignItems: 'center',
+    };
     return (
-      <div className = 'reviewsComponent'>
+      <div style={reviewStyles}>
 
         <StarRatingComponent
           name="rate1"
@@ -29,9 +30,9 @@ class Reviews extends React.Component {
           starBackground = {'blue'}
           onStarClick={this.onStarClick.bind(this)}
     />
-    {this.props.item.rating} ({this.props.item.reviews}) Write a Review
+    {this.props.item.rating} {"  "} ({this.props.item.reviews}) {"  "} Write a Review
       </div>
-    )
+    );
   }
 }
 

@@ -1,39 +1,20 @@
 # Project Name
 
-> Project description
+> Fenty Beauty - Product Display
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+  - https://github.com/proj-plus-ultra/fenty-nav-youll-wanna-see-this-
+  - https://github.com/proj-plus-ultra/fenty-reviews
+  - https://github.com/proj-plus-ultra/fenty-recommended
 
 ## Usage
 
-> Some usage instructions
+> NPM install
+> schema2.sql
+> seed file in database - seeds.js
+> NPM run start
+> NPM run build
+> http://localhost:8080
 
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
 

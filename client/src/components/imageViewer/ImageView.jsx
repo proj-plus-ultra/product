@@ -4,14 +4,14 @@ import Carousel from './Carousel.jsx';
 
 class ImageView extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       photos: [],
       photo: {},
       photo2: {},
       photo3: {},
-      hover: false
-    }
+      hover: false,
+    };
     this.getPhotos = this.getPhotos.bind(this);
     this.getPhotos = this.getPhotos.bind(this);
   }
@@ -36,30 +36,34 @@ class ImageView extends React.Component {
       this.setState({
         photo: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
         photo2: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
-        photo3: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))])
-      }, () => console.log(this.state.photo))
-    },500)
+        photo3: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
+      }, () => console.log(this.state.photo));
+    }, 500);
   }
 
   render() {
 
-    let newStyle = {
-      cursor: 'crosshair'
-    }
 
+    let foregroundStyle = {
+      cursor: 'crosshair',
+      position: 'absolute',
+      height: '543px',
+      width: '434px',
+      color: '#000',
+      left: '1250px',
+      top: '200px',
+    };
     return (
-      <div className = "photoContainer"  >
+      <div className="photoContainer">
 
-        <img style = {newStyle} src = {this.state.photo.background}></img>
+        <img src={this.state.photo.background}></img>
 
-        <div className = "foreground">
-          <Carousel  photo1 = {this.state.photo} photo2 = {this.state.photo2} photo3 = {this.state.photo3} whichPic = {this.props.whichPic}/>
+        <div style = {foregroundStyle}>
+          <Carousel photo1={this.state.photo} photo2={this.state.photo2} photo3={this.state.photo3} whichPic={this.props.whichPic} />
         </div>
-
       </div>
-    )
+    );
   }
 }
 
 export default ImageView;
-

@@ -1,33 +1,47 @@
 import React from 'react';
-import Detail from './detail.jsx'
-import Inspiration from './Inspiration.jsx'
-import How from './How.jsx'
-import Ingredients from './Ingredients.jsx'
+import Detail from './detail.jsx';
+import Inspiration from './Inspiration.jsx';
+import How from './How.jsx';
+import Ingredients from './Ingredients.jsx';
 
 class Info extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-
-    }
-    this.renderView = this.renderView.bind(this)
+    };
+    this.renderView = this.renderView.bind(this);
   }
 
   renderView() {
-    if(this.props.clicked === 'inspo') {
-      return <Inspiration item = {this.props.item}/>
+    if (this.props.clicked === 'inspo') {
+      return <Inspiration item={this.props.item} />;
     } else if (this.props.clicked === 'how') {
-      return <How />
+      return <How item={this.props.item}/>
     } else if (this.props.clicked === 'ingredients') {
-      return <Ingredients />
+      return <Ingredients item={this.props.item}/>
     } else {
-      return <Detail />
+      return <Detail item={this.props.item}/>
     }
   }
 
   render() {
-    return(
-      <div className = 'info'>
+    let infoStyle = {
+      display: 'flex',
+      flexDirection: 'column',
+      width: '580px',
+      height: '350px',
+      borderTop: '1px solid grey',
+      borderBottom: '1px solid grey',
+      overflow: 'scroll',
+      alignContent: 'center',
+      lineHeight: '18px',
+      fontWeight: 700,
+      letterSpacing: '3px',
+    };
+
+    return (
+
+      <div style={infoStyle}>
         <br />
 
         <div>
@@ -35,11 +49,8 @@ class Info extends React.Component {
         </div>
 
       </div>
-    )
+    );
   }
 }
 
-
-
 export default Info;
-

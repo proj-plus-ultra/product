@@ -1,32 +1,16 @@
 import React from 'react';
 
-class WishList extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      show: false
-    }
-    this.showModal = this.showModal.bind(this);
-  }
 
-  showModal() {
-    this.setState((prevState) => {
-      return {
-        show: !prevState.show
-      }
-    })
-  }
 
-  render() {
-    return (
-      <div className = 'addToWishList'>
-        ♡ ADD TO WISHLIST
-
-        {/* <button onClick = {() => this.showModal()}>SHOW </button> */}
-      </div>
-    )
+function WishList() {
+  let wishListStyle = {
+    letterSpacing: '3px',
+    fontSize: '12px',
   }
+  return (
+    <div style={wishListStyle}>
+     ♡ ADD TO WISHLIST
+    </div>
+  );
 }
-
-
 export default WishList;
