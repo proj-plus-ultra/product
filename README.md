@@ -10,11 +10,11 @@
 
 ## Usage
 
-> NPM install
-> schema2.sql
-> seed file in database - seeds.js
-> NPM run start
-> NPM run build
-> http://localhost:8080
+1. NPM install
+2. schema2.sql
+3. seed file in database - seeds.js
+4. NPM run start
+5. NPM run build
+6. http://localhost:8080
 
 
