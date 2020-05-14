@@ -21,6 +21,7 @@ class Colors extends React.Component {
 
   render() {
     let filtered = this.props.colors.filter((item) => item.id === this.state.id);
+    console.log(filtered);
 
     return (
       <div>

@@ -47,14 +47,15 @@ class ImageView extends React.Component {
     let foregroundStyle = {
       cursor: 'crosshair',
       position: 'absolute',
-      height: '543px',
-      width: '434px',
+      height: '880px',
+      width: '530px',
       color: '#000',
-      left: '1250px',
-      top: '200px',
+      left: '40vw',
+      top: '20vh'
     };
+
     return (
-      <div className="photoContainer">
+      <div >
 
         <img src={this.state.photo.background}></img>
 

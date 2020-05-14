@@ -7,7 +7,9 @@ function How(props) {
   };
   return (
     <p style = {newStyle}>
-      Blend into clean, dry skin with the Fenty Beauty Face & Body Kabuki 160 (sold separately).Apply to your body: Arms, legs, shoulders, collarbone—anywhere you want to glisten.
+      Blend into clean, dry skin with the Fenty Beauty Face & Body Kabuki 160 (sold separately).Apply to your body —anywhere you want to glisten.
+      <br />
+      <br />
     </p>
   );
 }

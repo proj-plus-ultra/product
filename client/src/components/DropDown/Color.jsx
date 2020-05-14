@@ -81,8 +81,8 @@ class Color extends React.Component {
 
   render() {
     let newSize = {
-      width: '2em',
-      height: '2em',
+      width: '5em',
+      height: '5em',
       display: 'inline-flex',
       flexDirection: 'row',
       alignItems: 'center',

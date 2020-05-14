@@ -9,6 +9,9 @@ function Inspiration(props) {
       <br />
 
       YOU'LL WANNA SEE THIS
+
+      <br />
+      <br />
     </div>
   );
 }

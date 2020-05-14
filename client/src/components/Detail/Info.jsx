@@ -35,8 +35,7 @@ class Info extends React.Component {
       overflow: 'scroll',
       alignContent: 'center',
       lineHeight: '18px',
-      fontWeight: 700,
-      letterSpacing: '3px',
+      letterSpacing: '2px',
     };
 
     return (

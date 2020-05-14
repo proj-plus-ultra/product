@@ -63,6 +63,7 @@ class App extends React.Component {
       // alignItems: 'stretch',
       flexGrow: 4,
       margin: '20px',
+      fontFamily: 'Questrial'
     };
 
     let containerStyle = {
@@ -75,8 +76,8 @@ class App extends React.Component {
       flexDirection: 'column',
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
-      margin: 30,
-      padding: 130,
+      margin: 70,
+      padding: 120,
     };
     return (
 
@@ -96,9 +97,7 @@ class App extends React.Component {
             <br />
             <DropDownList item={this.state.item} photoChange={this.photoChange} />
             <br />
-            <div style={{ margin: '5px' }}>
-              {/* {this.state.item.marketing} */}
-            </div>
+
             <br />
             <Bag />
             <br />

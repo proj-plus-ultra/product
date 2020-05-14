@@ -22,7 +22,7 @@ function Detail(props) {
 
         Give it to me quick:
 
-        A universal powder that absorbs shine and diffuses the look of pores for an instant filtered look on the fly.
+        A universal {props.item.category} that absorbs shine and diffuses the look of pores for an instant filtered look on the fly.
 
         <br />
         <br />
@@ -45,6 +45,8 @@ function Detail(props) {
         <br />
 
         Fill Weight: 8.5 g
+        <br />
+        <br />
       </p>
     </div>
   );
