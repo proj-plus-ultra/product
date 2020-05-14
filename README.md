@@ -11,10 +11,11 @@
 ## Usage
 
 1. NPM install
-2. schema2.sql
-3. seed file in database - seeds.js
-4. NPM run start
-5. NPM run build
+2. schema2.sql - mysql -u "ENTER USERNAME" <schema2.sql
+    (please verify db.js to configure user/pass/database)
+3. NPM run seed - utilizes seeds.js
+4. NPM run build
+5. NPM run start
 6. http://localhost:8080
 
 
