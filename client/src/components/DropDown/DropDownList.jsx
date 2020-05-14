@@ -18,7 +18,7 @@ class DropDownList extends React.Component {
 
 
   getColors() {
-    axios.get('/api/colors')
+    axios.get(`http://localhost:8080/api/colors`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
     .then((data) => {
       this.setState({
         colors: data.data
@@ -27,12 +27,7 @@ class DropDownList extends React.Component {
     .catch(err => console.error(err))
   }
 
-  // axios.get(`http://localhost:8080/api/colors`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
-
-
   render() {
-    console.log(this.props)
-
     let newStyle = {
       border: '20px',
     };

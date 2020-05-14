@@ -35,7 +35,7 @@ class Color extends React.Component {
         placeholder: this.state.update,
         placeColor: this.state.updateColor
       });
-    }, 200);
+    }, 700);
   }
 
   getPlace() {
@@ -48,7 +48,7 @@ class Color extends React.Component {
         placeColor: this.props.item[0].color1,
         id: this.props.item[0].id
       }, () => console.log(this.state.id));
-    }, 600);
+    }, 675);
   }
 
 

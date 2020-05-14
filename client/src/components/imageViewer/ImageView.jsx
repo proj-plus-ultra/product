@@ -22,7 +22,7 @@ class ImageView extends React.Component {
   }
 
   getPhotos() {
-    axios.get('/api/photos')
+    axios.get(`http://localhost:8080/api/photos`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
     .then((data) => {
       this.setState({
         photos: data.data
@@ -38,7 +38,7 @@ class ImageView extends React.Component {
         photo2: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
         photo3: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
       }, () => console.log(this.state.photo));
-    }, 500);
+    }, 550);
   }
 
   render() {

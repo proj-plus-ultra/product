@@ -32,7 +32,7 @@ class App extends React.Component {
   }
 
   getItems() {
-    axios.get('/api')
+    axios.get(`http://localhost:8080/api`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
      .then((data) => {
       this.setState({
         items: data.data,
@@ -46,7 +46,7 @@ class App extends React.Component {
       this.setState({
         item: (this.state.items[Math.floor(Math.random() * Math.floor(this.state.items.length))])
       }, () => console.log(this.state.item));
-    } ,500);
+    }, 550);
   }
 
   photoChange(id) {
@@ -97,7 +97,7 @@ class App extends React.Component {
             <DropDownList item={this.state.item} photoChange={this.photoChange} />
             <br />
             <div style={{ margin: '5px' }}>
-              {this.state.item.marketing}
+              {/* {this.state.item.marketing} */}
             </div>
             <br />
             <Bag />

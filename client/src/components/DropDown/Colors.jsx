@@ -24,7 +24,6 @@ class Colors extends React.Component {
 
     return (
       <div>
-        {/* className="palette" */}
         <div>
           <Color item={filtered} photoChange={this.props.photoChange} />
         </div>
