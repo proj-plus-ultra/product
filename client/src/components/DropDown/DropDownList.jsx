@@ -16,7 +16,6 @@ class DropDownList extends React.Component {
     this.getColors();
   }
 
-
   getColors() {
     axios.get(`http://localhost:8080/api/colors`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
     .then((data) => {

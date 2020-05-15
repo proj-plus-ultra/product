@@ -20,16 +20,23 @@ class Colors extends React.Component {
   }
 
   render() {
-    let filtered = this.props.colors.filter((item) => item.id === this.state.id);
-    console.log(filtered);
+    var filtered;
+    if(this.props.colors.length) {
+      filtered = this.props.colors.filter((item) => item.id === this.state.id);
+    }
 
-    return (
-      <div>
+    if(filtered) {
+      return (
         <div>
-          <Color item={filtered} photoChange={this.props.photoChange} />
+          <div>
+            <Color item={filtered} photoChange={this.props.photoChange} />
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return <div>Loading..</div>
+    }
+
   }
 }
 

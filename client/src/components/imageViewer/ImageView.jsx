@@ -18,7 +18,6 @@ class ImageView extends React.Component {
 
   componentDidMount() {
     this.getPhotos();
-    this.random();
   }
 
   getPhotos() {
@@ -28,30 +27,31 @@ class ImageView extends React.Component {
         photos: data.data
       }, () => console.log(this.state.photos))
     })
+    .then(() => {
+      this.random();
+    })
     .catch(err => console.error(err))
   }
 
+
   random() {
-    setTimeout(() => {
-      this.setState({
-        photo: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
-        photo2: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
-        photo3: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
-      }, () => console.log(this.state.photo));
-    }, 550);
+    this.setState({
+      photo: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
+      photo2: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
+      photo3: (this.state.photos[Math.floor(Math.random() * Math.floor(this.state.photos.length))]),
+    }, () => console.log(this.state.photo));
   }
 
   render() {
 
-
     let foregroundStyle = {
       cursor: 'crosshair',
       position: 'absolute',
-      height: '880px',
+      height: '900px',
       width: '530px',
       color: '#000',
       left: '40vw',
-      top: '20vh'
+      top: '13vh'
     };
 
     return (

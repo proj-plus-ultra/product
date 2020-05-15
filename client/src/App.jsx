@@ -28,7 +28,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getItems();
-    this.random();
+
   }
 
   getItems() {
@@ -38,15 +38,16 @@ class App extends React.Component {
         items: data.data,
       }, () => console.log(this.state.items))
     })
+    .then(() => {
+      this.random();
+    })
     .catch(err => console.error(err));
   }
 
   random() {
-    setTimeout(() => {
-      this.setState({
-        item: (this.state.items[Math.floor(Math.random() * Math.floor(this.state.items.length))])
-      }, () => console.log(this.state.item));
-    }, 550);
+    this.setState({
+      item: (this.state.items[Math.floor(Math.random() * Math.floor(this.state.items.length))])
+    }, () => console.log(this.state.item));
   }
 
   photoChange(id) {
@@ -79,35 +80,38 @@ class App extends React.Component {
       margin: 70,
       padding: 120,
     };
-    return (
 
-      <div style={newStyle}>
-        <div style={containerStyle}>
-          <div>
-            <NavLink item={this.state.item} />
-            <ImageView whichPic={this.state.whichPic}/>
-          </div>
 
-          <div style={sideContainer}>
-            <Product item={this.state.item} />
-            <br />
-            <ProductPrice item={this.state.item} />
-            <br />
-            <Reviews item={this.state.item}/>
-            <br />
-            <DropDownList item={this.state.item} photoChange={this.photoChange} />
-            <br />
+      return (
 
-            <br />
-            <Bag />
-            <br />
-            <WishList />
-            <br />
-            <Details item={this.state.item} />
+        <div style={newStyle}>
+          <div style={containerStyle}>
+            <div>
+              <NavLink item={this.state.item} />
+              <ImageView whichPic={this.state.whichPic}/>
+            </div>
+
+            <div style={sideContainer}>
+              <Product item={this.state.item} />
+              <br />
+              <ProductPrice item={this.state.item} />
+              <br />
+              <Reviews item={this.state.item}/>
+              <br />
+              <DropDownList item={this.state.item} photoChange={this.photoChange} />
+              <br />
+
+              <br />
+              <Bag />
+              <br />
+              <WishList />
+              <br />
+              <Details item={this.state.item} />
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+
   }
 }
 
