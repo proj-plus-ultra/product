@@ -7,7 +7,10 @@
     "build": "webpack -d --watch",
     "start": "nodemon server/index.js",
     "test": "jest",
-    "seed": "node database/seeds.js"
+    "schema": "mysql -h fenty.cfllt0uqgdrd.us-west-2.rds.amazonaws.com -P 3306 -u admin -p <schema2.sql",
+    "seed": "node database/seeds.js",
+    "deploy": "aws s3 sync client/dist s3://fenty-product --acl public-read",
+    "spin": "npm run build && npm run deploy"
   },
   "author": "Jordan Chun",
   "license": "ISC",
@@ -25,7 +28,6 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",

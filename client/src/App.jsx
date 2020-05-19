@@ -31,8 +31,21 @@ class App extends React.Component {
 
   }
 
+  // getItems() {
+  //   axios.get(`http://localhost:8080/api`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
+  //    .then((data) => {
+  //     this.setState({
+  //       items: data.data,
+  //     }, () => console.log(this.state.items))
+  //   })
+  //   .then(() => {
+  //     this.random();
+  //   })
+  //   .catch(err => console.error(err));
+  // }
+
   getItems() {
-    axios.get(`http://localhost:8080/api`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
+    axios.get(`http://ec2-54-200-140-86.us-west-2.compute.amazonaws.com:3000/api`)
      .then((data) => {
       this.setState({
         items: data.data,

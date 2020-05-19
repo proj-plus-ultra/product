@@ -20,8 +20,21 @@ class ImageView extends React.Component {
     this.getPhotos();
   }
 
+  // getPhotos() {
+  //   axios.get(`http://localhost:8080/api/photos`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
+  //   .then((data) => {
+  //     this.setState({
+  //       photos: data.data
+  //     }, () => console.log(this.state.photos))
+  //   })
+  //   .then(() => {
+  //     this.random();
+  //   })
+  //   .catch(err => console.error(err))
+  // }
+
   getPhotos() {
-    axios.get(`http://localhost:8080/api/photos`, {headers:{'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}})
+    axios.get(`http://ec2-54-200-140-86.us-west-2.compute.amazonaws.com:3000/api/photos`)
     .then((data) => {
       this.setState({
         photos: data.data

@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 function WishList() {
   let wishListStyle = {
     letterSpacing: '3px',
