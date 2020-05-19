@@ -11,11 +11,11 @@
 ## Usage
 
 1. NPM install
-2. schema2.sql - mysql -u "ENTER USERNAME" <schema2.sql
-    (please verify db.js to configure user/password/database)
+2. NPM run schema. (please refer to package.json may need to change your own RDS)
 3. NPM run seed - utilizes seeds.js
-4. NPM run build
-5. NPM run start
-6. http://localhost:8080
+4. NPM run spin - if spin only runs the build. NPM run build & NPM run deploy.
+5. Run Docker file. 
+5. SSH into EC2 and run docker image from your docker hub.
 
 
+** index.html is being served from s3 bundle's currently. May need to refactor to your liking.
